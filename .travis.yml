@@ -4,4 +4,4 @@ install: skip
 os: linux
 script:
   - ./gradlew build
-
+  - ./gradlew test
