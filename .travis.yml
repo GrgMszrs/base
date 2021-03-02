@@ -3,5 +3,5 @@ install: skip
 
 os: linux
 script:
-  - ./gradlew build --scan -s
+  - ./gradlew build
 
