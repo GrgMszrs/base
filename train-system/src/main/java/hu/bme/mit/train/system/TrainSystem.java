@@ -10,7 +10,7 @@ import hu.bme.mit.train.user.TrainUserImpl;
 public class TrainSystem {
 	// Fixing the issue, adding more comment to approve pull request
 	private TrainController controller = new TrainControllerImpl();
-	private TrainUser = new TrainUserImpl(controller);
+	private TrainUser user = new TrainUserImpl(controller);
 	private TrainSensor sensor = new TrainSensorImpl(controller, user);
 
 	public TrainController getController() {
