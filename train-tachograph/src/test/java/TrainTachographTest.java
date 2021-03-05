@@ -15,7 +15,6 @@ public class TrainTachographTest {
         trainSystem = new TrainSystem();
     }
 
-
     @Test
     public void Test() {
         trainTachograph.putNewRow(LocalDateTime.now(), trainSystem.getUser().getJoystickPosition(), trainSystem.getController().getReferenceSpeed());
