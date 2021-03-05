@@ -1,10 +1,9 @@
-import com.google.common.collect.Table;
-import com.google.common.collect.TreeBasedTable;
+import com.google.common.collect.*;
 
 import java.time.LocalDateTime;
 
 public class TrainTachograph {
-   private Table<LocalDateTime, Integer, Integer> tachographTable;
+    private Table<LocalDateTime, Integer, Integer> tachographTable;
 
     public TrainTachograph(){
         tachographTable = TreeBasedTable.create();
