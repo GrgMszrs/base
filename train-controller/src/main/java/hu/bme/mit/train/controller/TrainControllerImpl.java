@@ -4,7 +4,7 @@ import hu.bme.mit.train.interfaces.TrainController;
 
 public class TrainControllerImpl implements TrainController {
 
-	private Thread thread;
+	private Thread thrd;
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
@@ -47,8 +47,8 @@ public class TrainControllerImpl implements TrainController {
 	}
 
 	public TrainControllerImpl(){
-		thread = new Thread(() -> {
-			thread.start();
+		thrd = new Thread(() -> {
+			thrd.start();
 			followSpeed();
 			try {
 				Thread.sleep(1000);
