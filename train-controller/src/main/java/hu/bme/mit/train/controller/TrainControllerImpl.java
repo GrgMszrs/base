@@ -48,6 +48,7 @@ public class TrainControllerImpl implements TrainController {
 		this.step = joystickPosition;
 		int delay = 1000;
 		int period = 1000;
+
 		Timer timer = new Timer();
 		TimerTask timerTask = new TimerTask() {
 
@@ -56,7 +57,8 @@ public class TrainControllerImpl implements TrainController {
 				followSpeed();
 			}
 		};
-		timer.scheduleAtFixedRate(timerTask,delay, period);
+
+		timer.scheduleAtFixedRate(timerTask, delay, period);
 	}
 
 }
