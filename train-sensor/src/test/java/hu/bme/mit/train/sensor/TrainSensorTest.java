@@ -20,7 +20,26 @@ public class TrainSensorTest {
     }
 
     @Test
-    public void ThisIsAnExampleTestStub() {
-        // TODO Delete this and add test cases based on the issues
+    public void testLargeSpeedLimit() {
+        sensor.overrideSpeedLimit(678);
+        verify(user, times(1)).setAlarmState(true);
+    }
+
+    @Test
+    public void testNegativeSpeedLimit() {
+        sensor.overrideSpeedLimit(-12);
+        verify(user, times(1)).setAlarmState(true);
+    }
+
+    @Test
+    public void testNormalSpeedLimit() {
+        sensor.overrideSpeedLimit(7);
+        verify(user, times(1)).setAlarmState(false);
+    }
+
+    @Test
+    public void testMoreThan50PercentSpeedLimitDecrease() {
+        sensor.overrideSpeedLimit(-1);
+        verify(user, times(1)).setAlarmState(true);
     }
 }
