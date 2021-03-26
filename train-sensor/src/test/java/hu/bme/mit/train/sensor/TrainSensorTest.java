@@ -38,8 +38,8 @@ public class TrainSensorTest {
     }
 
     @Test
-    public void testMoreThan50PercentSpeedLimitDecrease() {
-        sensor.overrideSpeedLimit(-1);
-        verify(user, times(1)).setAlarmState(true);
+    public void testNegativeSpeedLimitFalse() {
+        sensor.overrideSpeedLimit(-2);
+        verify(user, times(0)).setAlarmState(false);
     }
 }
